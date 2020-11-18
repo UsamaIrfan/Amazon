@@ -1,0 +1,146 @@
+.header {
+   background: var(--clr-primary);
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   position: sticky;
+   width: 100%;
+   z-index:100;
+}
+
+.header__logo {
+   width: 100px;
+   margin: .8em 1.5em 0 1em;
+   object-fit: contain;
+}
+
+.header__search {
+   display: flex;
+   align-items: center;
+   flex: 1;
+}
+
+.header__search:focus-within {
+   border: 2px solid var(--clr-accent);
+   border-radius: 5px;
+}
+
+.header__searchInput {
+   padding: 10px;
+   height: 12px;
+   width: 100%;
+   font-size: 1rem;
+}
+
+.header__searchIcon {
+   background:var(--clr-accentLight);
+   height: 22px !important;
+   padding: 6px;
+}
+
+.header__searchIcon:hover {
+   background: var(--clr-accent);
+}
+
+.header__nav {
+   display: flex;
+   justify-content: space-evenly;
+}
+
+.header__link {
+   text-decoration: none;
+   color: #fff;
+}
+
+.header__link:hover .header__lightOption, .header__link:hover .header__optionBasket {
+   color:var(--clr-accent);
+}
+
+.header__option {
+   display: flex;
+   flex-direction: column; 
+   margin: 0 10px;
+}
+
+.header__darkOption {
+   font-size: 10px;
+}
+
+.header__lightOption {
+   font-size: 13px;
+   font-weight: 800;
+}
+
+.header__optionBasket {
+   display: flex;
+   align-items: center;
+   padding: .5em 0;
+}
+
+.header__basketNumber {
+   margin: 0 1em 0 .5em;
+}
+
+.header__cross {
+   color: var(--clr-accent);
+   display: none;
+}
+
+.header__hamburger {
+   display: none;
+   color: var(--clr-accent);
+   align-self: center;
+   margin: 0 .5em;
+}
+
+@media screen and (max-width: 480px) {
+   .header__nav.show {
+      transform: translateX(0);
+   }
+   
+   .header__nav.hidden {
+      transform: translateX(100vw);
+   }
+   .header__cross{
+      display: block;
+   }
+   .header__search {
+      display: none;
+   }
+   .header__search {
+      margin-right: .3em;
+   }
+   .header__nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: var(--clr-primary);
+      flex-direction: column;
+      align-items: center;
+      transition: transform .3s ease;
+   }
+   .header__option {
+      align-items: center;
+   }
+   .header__darkOption {
+      font-size: 1rem;
+   }
+   .header__lightOption {
+      font-size: 2rem;
+   }
+   .header__email {
+      display: none;
+   }
+   .header__logo {
+      width: 60px;
+      margin: .8em 1em 0 1em;
+   }
+   .header__email {
+      display: block;
+   }
+   .header__hamburger {
+      display: block;
+   }
+}

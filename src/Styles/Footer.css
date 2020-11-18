@@ -1,0 +1,29 @@
+.footer {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   background: var(--clr-primary);
+   text-align: center;
+}
+
+.footer__logo {
+   width: 100px;
+}
+
+.footer__backToTop {
+   padding: .5em;
+   background: #232F3E;
+}
+
+.footer__backToTop:hover, .footer__backToTop:focus {
+   background: #37475A;
+}
+
+.footer__backToTop p {
+   text-decoration: none;
+   color: #fff;
+}
+
+.footer__bar {
+   padding-top: 1em;
+}
